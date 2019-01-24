@@ -12,3 +12,11 @@ function largestOfFour(arr) {
     return newArr;
   }
   largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);
+  console.log(largest([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
+  function largest(arr){
+      return arr.map(function(eachArr){
+          return eachArr.reduce(function(prev, current){
+              return prev > current ? prev : current  
+          })
+      })
+  }
